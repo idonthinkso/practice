@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load test_tags %}
+    <meta charset="UTF-8">
+    <title>pro</title>
+</head>
+<body>
+<form action="{% url 'dio:login' %}" id="pro_form">
+    <h1>{% multi_decimal 39.5 10.6 %}</h1>
+    <h2>{% widthratio 39.5 1 10.6 %}</h2>
+    <a href="javascript:void(0);" id="register">立即注册</a>
+</form>
+<script src="{% static 'js/jquery-1.11.1.js' %}"></script>
+<script>
+    $('#register').click(function () {
+        document:pro_form.submit();
+    });
+</script>
+</body>
+</html>
